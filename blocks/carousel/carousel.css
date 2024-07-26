@@ -1,0 +1,68 @@
+.carousel {
+    --gutter: 30px;
+}
+
+.carousel .carousel-container {
+    display: flex;
+    align-items: center;
+}
+
+.carousel .carousel-item-container {
+    display: flex;
+    overflow: hidden;
+    gap: var(--gutter);
+}
+
+.carousel .carousel-item {
+    min-width: calc((100% / 3) - 20px);
+    background: white;
+}
+
+.carousel .carousel-item p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+.carousel .carousel-item p:first-child {
+    margin-top: 0;
+}
+
+.carousel .carousel-item p:not(:first-child) {
+    padding: 0 20px;
+}
+
+.carousel .carousel-item img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.carousel .carousel-button{
+    cursor: pointer;
+}
+
+.carousel .carousel-button:first-child {
+    transform: rotate(90deg);
+    margin-right: 20px;
+}
+
+.carousel .carousel-button:last-child {
+    transform: rotate(-90deg);
+    margin-left: 20px;
+}
+
+.carousel .carousel-button p {
+    margin: 0;
+    height: 24px;
+}
+.carousel .carousel-button.hidden {
+    visibility: hidden;
+}
+
+@media (width <= 900px) {
+    .carousel .carousel-item {
+        min-width: 100%;
+    }
+}

@@ -1,0 +1,25 @@
+.accordion .accordion-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.accordion .accordion-button p {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.accordion .accordion-content {
+    height: 0;
+    overflow: hidden;
+    transition: height .5s ease-in-out;
+}
+
+.accordion .icon-carrot {
+    transition: transform .2s ease-in-out;
+}
+
+.accordion.opened .icon-carrot {
+    transform: rotate(-180deg);
+}
